@@ -8,26 +8,128 @@
 
 /****************************************/
 body {
+    overflow-x: hidden;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
-    color: rgb(75, 71, 71);
-    font-size: 1.2rem;
-    line-height: 1.4em;
-}
-
-p {
-    margin-top: 1.6em;
-}
-
-.container {
-    width: 85%;
-    max-width: 850px;
-    margin: 0px auto;
+    background: rgb(150, 144, 144);
+    color: white;
+    line-height: 1.6;
 }
 
 .main {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+
+.buttons button:hover {
+    color: #333;
+    /*border: 2px solid black;*/
+    background-color: white;
+}
+
+
+.buttons button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 13px;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media screen and (max-width: 500px) {
+    .slide .content {
+      bottom: -300px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .slide.current .content {
+      transform: translateY(-300px);
+    }
+  }
+
+/* Backgorund Images */
+ 
+.slide:first-child {
+    background: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(2) {
+    background: url('https://source.unsplash.com/BeOW_PJjA0w/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url('https://source.unsplash.com/ULmaQh9Gvbg/1600x900') no-repeat
+      center top/cover;
+  } 
+  .slide:nth-child(6)  {
+    background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat
+      center center/cover;
+  }
 /****************************************/
 nav {
     display: flex;
@@ -38,6 +140,8 @@ nav {
     position: fixed;
     top: 0px;
     width: 100%;
+    height: 50px;
+    z-index: 999999; 
 }
 
 .logo{
@@ -80,6 +184,7 @@ nav ul {
 
 .submenu {
     position: absolute;
+    overflow: inherit;
     background: rgb(242, 242, 245);
     visibility: hidden;
     border-radius: 5%;
@@ -138,7 +243,7 @@ nav ul {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-    .menu li{
+    .menu > li{
         opacity: 0;
     }
     .burger{
@@ -162,9 +267,10 @@ nav ul {
 }
 
 .footer {
-    margin-top: 50px;
     background-color: #333;
     color: white;
-    padding: 50px 0px;
+    padding: 40px 0;
+    width: 100%;
     text-align: center;
+    
 }
