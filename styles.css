@@ -6,13 +6,38 @@
     box-sizing: border-box;
 }
 
+/****************************************/
+body {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(75, 71, 71);
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+
+p {
+    margin-top: 1.6em;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0px auto;
+}
+
+.main {
+    padding-top: 100px;
+}
+
+/****************************************/
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color:rgb(123, 104, 238);
-    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
 .logo{
@@ -49,6 +74,8 @@ nav ul {
 .menu li a:hover {
     color: rgb(123, 104, 238);
     transition: all .3s;
+    background-color:#333;
+    border-radius: 5px;
 }
 
 .submenu {
@@ -99,19 +126,19 @@ nav ul {
         overflow-x: hidden;
     }
     .menu{
+        display: flex;
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
         background-color: rgb(71, 68, 68);
-        display: flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-    .menu > li{
+    .menu li{
         opacity: 0;
     }
     .burger{
@@ -119,9 +146,9 @@ nav ul {
     }
 }
 
-.nav-active{
+.nav-active {
     transform: translateX(0%);
-}
+}   
 
 @keyframes navLinkFade{
     from{
@@ -132,4 +159,12 @@ nav ul {
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: #333;
+    color: white;
+    padding: 50px 0px;
+    text-align: center;
 }
