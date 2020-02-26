@@ -137,7 +137,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:rgb(123, 104, 238);
+    background-color:rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0px;
     width: 100%;
@@ -237,8 +237,8 @@ nav ul {
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
-        background-color: rgb(71, 68, 68);
+        top: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
         flex-direction: column;
         align-items: center;
         width: 30%;
@@ -390,14 +390,107 @@ nav ul {
         display: flex;
         flex-direction: column;
     }
+
+    iframe {
+        width: 460px;
+        height: 215px;
+    }
 }
 
 /**************************************************/
+
+.presentation {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	min-height: 80vh;
+	align-items: center;
+}
+.introduction {
+	flex: 1;
+}
+.intro-text h1 {
+	font-size: 44px;
+    font-weight: 500;
+    color: brown;
+    text-align: center;
+}
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #333;
+}
+.cta {
+	padding: 50px 0px 0px 0px;
+}
+
+.cta button {
+    outline: none;
+}
+
+.cta-select:hover{
+    border-radius: 10px;
+    background-color: coral;
+}
+
+.cta-add:hover{
+    border-radius: 10px;
+    background-color: coral;
+}
+
+.cta-select {
+    background-color: black;
+    color: white;
+	width: 150px;
+	height: 50px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: .3s ease;
+}
+.cta-add {
+	background: black;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+    color: white;
+    margin: 0px 0px 0px 30px;
+    transition: .3s ease;
+}
+
+.video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+@media screen and (max-width: 1270px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+}
+
+/*************************************************/
 
 .footer {
     background-color: #333;
     color: white;
     padding: 40px 0;
-    width: 100%;
     text-align: center;
 }
