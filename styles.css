@@ -11,8 +11,6 @@ body {
     overflow-x: hidden;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    background: rgb(150, 144, 144);
-    color: white;
     line-height: 1.6;
 }
 
@@ -74,6 +72,9 @@ body {
     left: 15px;
 }
 
+.buttons .fas{
+    font-size: 20px;
+}
 
 .buttons button:hover {
     color: #333;
@@ -277,11 +278,126 @@ nav ul {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/************************* Cards *************************/
+
+.cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.cards h1 {
+    font-size: 40px;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px ;
+    padding: 20px;
+    border: 2px black solid;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.content .fab {
+    font-size: 70px;
+    margin: 16px 0;
+}
+
+.content > * {
+    flex: 1 1 100%;
+}
+
+.content:hover {
+    color:white;
+}
+
+.content:hover a {
+    background: white;
+}
+
+.content-1:hover {
+    border-color: #1DA1F2;
+    background: #1DA1F2;
+}
+
+.content-1:hover a {
+    color: #1DA1F2;
+    font-weight: 500;
+}
+
+.content-2:hover {
+    border-color: #E1306C;
+    background: #E1306C;
+}
+
+.content-2:hover a {
+    color: #E1306C;
+    font-weight: 500;
+}
+
+.content-3:hover {
+    border-color: #ff0000;
+    background: #ff0000;
+}
+
+.content-3:hover a {
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.content h2 {
+    font-size: 30px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content p {
+    font-size: 17px;
+}
+
+.content a {
+    margin: 22px 0;
+    background: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-radius: 25px;
+    transition: .3s ease;
+}
+
+.content a:hover {
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/**************************************************/
+
 .footer {
     background-color: #333;
     color: white;
     padding: 40px 0;
     width: 100%;
     text-align: center;
-    
 }
