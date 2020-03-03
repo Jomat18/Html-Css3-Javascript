@@ -246,7 +246,7 @@ nav ul {
         background-color: rgba(0, 0, 0, 0.5);
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 50%;
         transform: translateX(100%);
     }
 
@@ -401,13 +401,12 @@ nav ul {
 .presentation {
 	display: flex;
 	width: 80%;
-	margin: auto;
+	margin: 10px auto;
 	justify-content: center;
-	align-items: center;
-	padding: 4pc 0;
+    align-items: center;	
 }
 .introduction {
-	flex: 1;
+    flex: 1;
 }
 .intro-text h1 {
 	font-size: 44px;
@@ -418,45 +417,28 @@ nav ul {
 .intro-text p {
 	margin-top: 5px;
 	font-size: 22px;
-	color: #333;
+    color: #333;
 }
 .cta {
-	padding: 50px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
+}
+
+.cta button:hover{
+    border-radius: 10px;
+    background-color: coral;
 }
 
 .cta button {
+    margin: 0px 30px 0px 30px;
     outline: none;
-}
-
-.cta-select:hover{
-    border-radius: 10px;
-    background-color: coral;
-}
-
-.cta-add:hover{
-    border-radius: 10px;
-    background-color: coral;
-}
-
-.cta-select {
     background-color: black;
     color: white;
+    border-radius: 5px;
 	width: 150px;
 	height: 50px;
     cursor: pointer;
     border: none;
     font-size: 16px;
-    transition: .3s ease;
-}
-.cta-add {
-	background: black;
-	width: 150px;
-	height: 50px;
-	cursor: pointer;
-	font-size: 16px;
-	border: none;
-    color: white;
-    margin: 0px 0px 0px 30px;
     transition: .3s ease;
 }
 
@@ -481,7 +463,7 @@ nav ul {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
 	.presentation {
 		flex-direction: column;
 	}
@@ -493,10 +475,11 @@ nav ul {
 		font-size: 30px;
 	}
 	.intro-text p {
-		font-size: 18px;
-	}
-	.cta {
-		padding: 10px 0px 0px 0px;
+		font-size: 18px;    
+    }
+
+	.cta button {
+        margin: 10px;
     }
 
     .video {
@@ -514,7 +497,12 @@ nav ul {
 
 .footer {
     background-color: black;
+    height: 100px;
     color: white;
-    padding: 40px 0;
+    margin: 40px 0px 0px;
     text-align: center;
+}
+
+.footer p {
+    padding: 40px 0px;
 }
