@@ -1,3 +1,15 @@
+/*     CSS variables          */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+/* html {
+
+}*/
+
 * {
     margin: 0px;
     padding: 0px;
@@ -493,16 +505,54 @@ nav ul {
     
 }
 
+/************************* Boxes ************************/
+
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px;
+}
+
+.box {
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+@media(max-width: 700px) {
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /*************************************************/
+
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow * {
+    margin: 5px;
+}
+
+.follow .fab {
+    color: white;
+    font-size: 25px;
+    margin-top: 40px;
+}
 
 .footer {
     background-color: black;
-    height: 100px;
-    color: white;
+    height: 200px;
     margin: 40px 0px 0px;
     text-align: center;
 }
 
 .footer p {
-    padding: 40px 0px;
+    color: #fff;
+    font-size: 20px;
+    padding-top: 30px;
 }

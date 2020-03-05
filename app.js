@@ -16,14 +16,6 @@ const navSlide = () => {
         
         burger.classList.toggle('toggle');
     });
-
-    document.querySelector('#main').addEventListener('click', () => {
-      
-    });
-
-    
-
-    
 }
 
 navSlide();
