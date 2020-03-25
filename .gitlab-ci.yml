@@ -1,0 +1,9 @@
+stages:
+  - despliegue
+
+deploy:
+  stage: despliegue
+  script:
+    - echo "Hello World"
+        
+
