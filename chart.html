@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="chart.css">
+    <title>Chart.js</title>
+</head>
+<body>
+	<header>
+        <nav>
+            <div class="logo">
+                <h4>The logo</h4>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="todo.html">Productos</a>
+                <li><a href="#">Precios</a> 
+                <li><a href="chart.html">Servicios</a>        
+                    <ul class="submenu">
+                        <li><a href="#">Servicio 1</a>
+                        <li><a href="#">Servicio 2</a>       
+                        <li><a href="#">Servicio 3</a>     
+                    </ul>
+                </li>    
+                <li><a href="#">Catalogo</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>       
+    </header>
+    <div class="container">
+        <canvas id="myChart1" width="800" height="400"></canvas>
+        <br>
+        <br>
+        <canvas id="myChart2" width="800" height="400"></canvas>
+    </div>
+
+    <script src="Csv.js"></script>
+    <script src="Chart.js"></script>
+    
+</body>
+</html>
